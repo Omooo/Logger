@@ -2,6 +2,7 @@ package top.omooo.log.imp
 
 import top.omooo.log.api.ILoggerFactory
 import top.omooo.log.api.Logger
+import java.util.concurrent.ConcurrentHashMap
 
 /**
  * LoggerFactory 的一个实现
@@ -12,8 +13,10 @@ import top.omooo.log.api.Logger
  */
 class LoggerFactory_1 : ILoggerFactory {
 
-    override fun getLogger(): Logger {
-        return LoggerImpl_1()
+    private val loggers: MutableMap<String, Logger> by lazy(::ConcurrentHashMap)
+
+    override fun getLogger(name: String): Logger = loggers.getOrPut(name){
+        LoggerImpl_1(name)
     }
 
 }

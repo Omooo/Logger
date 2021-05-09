@@ -6,13 +6,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-sourceSets {
-    main {
-        java {
-            exclude 'top/omooo/log/imp/StaticLoggerBinder.java'
-        }
-    }
+// 在 release 时会把该类剔除，但是在 debug 时并不会
+jar {
+    exclude('top/omooo/log/imp/StaticLoggerBinder.class')
 }
-
-sourceCompatibility = "1.7"
-targetCompatibility = "1.7"

@@ -8,5 +8,5 @@ package top.omooo.log.api
  * @since 2021/5/6
  */
 interface ILoggerFactory {
-    fun getLogger(): Logger
+    fun getLogger(name: String): Logger
 }
