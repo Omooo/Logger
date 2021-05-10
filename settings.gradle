@@ -1,2 +1,5 @@
+include ':log-imp-2'
+include ':log-imp-1'
+include ':log-api'
 include ':app'
 rootProject.name = "Logger"

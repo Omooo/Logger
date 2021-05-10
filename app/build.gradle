@@ -31,4 +31,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
+    implementation project(":log-api")
+//    implementation project(":log-imp-1")
+    implementation project(":log-imp-2")
 }
