@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap
  * @version v1.0
  * @since 2021/5/6
  */
-class LoggerFactory_2 : ILoggerFactory {
+internal object LoggerFactory_2 : ILoggerFactory {
 
     private val loggers: MutableMap<String, Logger> by lazy(::ConcurrentHashMap)
 

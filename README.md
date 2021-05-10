@@ -16,10 +16,10 @@ Logger
 
 其实是在 log-api 里面有一个空实现（对应的就是 StaticLoggerBinder）用于欺骗编译器，但是在打包时并不会改该实现类打进去。而每个实现模块其实都有一个 StaticLoggerBinder 类，这样在运行时就会使用对应的实现模块里面的 StaticLoggerBinder 类咯。
 
-在 release 模式下，我们需要去掉 api 模块里面的 StaticLoggerBinder 类，不然在合并 dex 时会发现有多个相同的类就会出错，所以需要在 release 下去掉 log-api 模块里面的 StaticLoggerBinder 类，具体就是在 log-api 的 build.gradle 文件里添加：
+在打 jar 时我们需要剔除掉 log-api 模块中的 StaticLoggerBinder 类，具体就是在 log-api 的 build.gradle 文件里添加：
 
 ```groovy
-// 在 release 时会把该类剔除，但是在 debug 时并不会
+// 在打 jar 包时会剔除该类
 jar {
     exclude('top/omooo/log/imp/StaticLoggerBinder.class')
 }

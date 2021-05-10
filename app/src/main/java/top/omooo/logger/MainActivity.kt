@@ -8,7 +8,7 @@ import top.omooo.log.api.LoggerFactory
 
 class MainActivity : AppCompatActivity() {
 
-    private val logger: Logger = LoggerFactory.getLogger(MainActivity::class.simpleName.toString())
+    private val logger: Logger = LoggerFactory.getLogger(MainActivity::class)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

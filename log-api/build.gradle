@@ -6,7 +6,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-// 在 release 时会把该类剔除，但是在 debug 时并不会
+// 在打 jar 包时会剔除该类
 jar {
     exclude('top/omooo/log/imp/StaticLoggerBinder.class')
 }

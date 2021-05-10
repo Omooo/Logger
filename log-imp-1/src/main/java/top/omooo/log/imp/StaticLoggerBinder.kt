@@ -6,7 +6,7 @@ import top.omooo.log.api.LoggerFactoryBinder
 internal object StaticLoggerBinder : LoggerFactoryBinder {
 
     override fun getLoggerFactory(): ILoggerFactory {
-        return LoggerFactory_1()
+        return LoggerFactory_1
     }
 
 }
