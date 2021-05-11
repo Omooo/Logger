@@ -1,6 +1,6 @@
 package top.omooo.log.api
 
-import top.omooo.log.imp.StaticLoggerBinder
+import top.omooo.log.impl.StaticLoggerBinder
 import kotlin.reflect.KClass
 
 /**

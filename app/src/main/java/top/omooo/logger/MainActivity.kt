@@ -2,7 +2,6 @@ package top.omooo.logger
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import top.omooo.log.api.Logger
 import top.omooo.log.api.LoggerFactory
 
